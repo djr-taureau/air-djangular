@@ -12,7 +12,7 @@ schema_view = get_schema_view(title=API_TITLE)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('snippets.urls')),
-    url(r'^employees/', include('employee_app.urls')),
+    url(r'^employees/', include('employees.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^schema/$', schema_view)
 ]
