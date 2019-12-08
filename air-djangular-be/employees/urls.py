@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from rest_framework.routers import DefaultRouter
 
-from employee_app import views
+from employees import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()

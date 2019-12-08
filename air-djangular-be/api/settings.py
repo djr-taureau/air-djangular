@@ -41,11 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'snippets.apps.SnippetsConfig',
-    'employees.apps.EmployeesConfig',
-    'employee_app.apps.EmployeeAppConfig',
+    'employees.apps.EmployeesConfig'
 ]
 
-DATABASE_ROUTERS = ['rest_tutorial.router.AirAngularRouter']
+DATABASE_ROUTERS = ['api.router.AirAngularRouter']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'rest_tutorial.urls'
+ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rest_tutorial.wsgi.application'
+WSGI_APPLICATION = 'api.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

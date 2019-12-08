@@ -41,7 +41,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='DeptEmp',
             fields=[
-                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employee_app.Employees')),
+                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employees.Employees')),
                 ('from_date', models.DateField()),
                 ('to_date', models.DateField()),
             ],
@@ -53,7 +53,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='DeptManager',
             fields=[
-                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employee_app.Employees')),
+                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employees.Employees')),
                 ('from_date', models.DateField()),
                 ('to_date', models.DateField()),
             ],
@@ -65,7 +65,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Salaries',
             fields=[
-                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employee_app.Employees')),
+                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employees.Employees')),
                 ('salary', models.IntegerField()),
                 ('from_date', models.DateField()),
                 ('to_date', models.DateField()),
@@ -78,7 +78,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Titles',
             fields=[
-                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employee_app.Employees')),
+                ('emp_no', models.ForeignKey(db_column='emp_no', on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='employees.Employees')),
                 ('title', models.CharField(max_length=50)),
                 ('from_date', models.DateField()),
                 ('to_date', models.DateField(blank=True, null=True)),
